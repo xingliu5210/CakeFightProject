@@ -26,4 +26,18 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+private: 
+	private:
+	UPROPERTY()
+	class UCapsuleComponent* CapsuleComp;
+
+	UPROPERTY()
+	UStaticMeshComponent* BaseMesh;
+	
+	UPROPERTY()
+	UStaticMeshComponent* TopMesh;
+
+	UPROPERTY()
+	USceneComponent* ProjectileSpawnPoint;
+
 };
