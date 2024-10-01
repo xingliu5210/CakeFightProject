@@ -1,73 +1,89 @@
 [
 	{
-		"file": "E:\\Game Dev\\Cake Fight\\CakeFight\\Source\\CakeFight\\CakeFight.Build.cs",
+		"file": "E:\\Game Dev\\Cake Fight\\CakeFight\\CakeFight\\Source\\CakeFight\\BaseCake.cpp",
 		"arguments": [
 			"E:\\VScode\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
-			"@E:\\Game Dev\\Cake Fight\\CakeFight\\.vscode\\compileCommands_Default\\CakeFight.1.rsp"
+			"@E:\\Game Dev\\Cake Fight\\CakeFight\\CakeFight\\.vscode\\compileCommands_Default\\CakeFight.1.rsp"
 		],
 		"directory": "E:\\Game Dev\\UE5\\UE5\\UE_5.4\\Engine\\Source"
 	},
 	{
-		"file": "E:\\Game Dev\\Cake Fight\\CakeFight\\Source\\CakeFight\\CakeFight.cpp",
+		"file": "E:\\Game Dev\\Cake Fight\\CakeFight\\CakeFight\\Source\\CakeFight\\BaseCake.h",
 		"arguments": [
 			"E:\\VScode\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
-			"@E:\\Game Dev\\Cake Fight\\CakeFight\\.vscode\\compileCommands_Default\\CakeFight.1.rsp"
+			"@E:\\Game Dev\\Cake Fight\\CakeFight\\CakeFight\\.vscode\\compileCommands_Default\\CakeFight.1.rsp"
 		],
 		"directory": "E:\\Game Dev\\UE5\\UE5\\UE_5.4\\Engine\\Source"
 	},
 	{
-		"file": "E:\\Game Dev\\Cake Fight\\CakeFight\\Source\\CakeFight\\CakeFight.h",
+		"file": "E:\\Game Dev\\Cake Fight\\CakeFight\\CakeFight\\Source\\CakeFight\\CakeFight.Build.cs",
 		"arguments": [
 			"E:\\VScode\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
-			"@E:\\Game Dev\\Cake Fight\\CakeFight\\.vscode\\compileCommands_Default\\CakeFight.1.rsp"
+			"@E:\\Game Dev\\Cake Fight\\CakeFight\\CakeFight\\.vscode\\compileCommands_Default\\CakeFight.1.rsp"
 		],
 		"directory": "E:\\Game Dev\\UE5\\UE5\\UE_5.4\\Engine\\Source"
 	},
 	{
-		"file": "E:\\Game Dev\\Cake Fight\\CakeFight\\Source\\CakeFight\\CakeFightCharacter.cpp",
+		"file": "E:\\Game Dev\\Cake Fight\\CakeFight\\CakeFight\\Source\\CakeFight\\CakeFight.cpp",
 		"arguments": [
 			"E:\\VScode\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
-			"@E:\\Game Dev\\Cake Fight\\CakeFight\\.vscode\\compileCommands_Default\\CakeFight.1.rsp"
+			"@E:\\Game Dev\\Cake Fight\\CakeFight\\CakeFight\\.vscode\\compileCommands_Default\\CakeFight.1.rsp"
 		],
 		"directory": "E:\\Game Dev\\UE5\\UE5\\UE_5.4\\Engine\\Source"
 	},
 	{
-		"file": "E:\\Game Dev\\Cake Fight\\CakeFight\\Source\\CakeFight\\CakeFightCharacter.h",
+		"file": "E:\\Game Dev\\Cake Fight\\CakeFight\\CakeFight\\Source\\CakeFight\\CakeFight.h",
 		"arguments": [
 			"E:\\VScode\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
-			"@E:\\Game Dev\\Cake Fight\\CakeFight\\.vscode\\compileCommands_Default\\CakeFight.1.rsp"
+			"@E:\\Game Dev\\Cake Fight\\CakeFight\\CakeFight\\.vscode\\compileCommands_Default\\CakeFight.1.rsp"
 		],
 		"directory": "E:\\Game Dev\\UE5\\UE5\\UE_5.4\\Engine\\Source"
 	},
 	{
-		"file": "E:\\Game Dev\\Cake Fight\\CakeFight\\Source\\CakeFight\\CakeFightGameMode.cpp",
+		"file": "E:\\Game Dev\\Cake Fight\\CakeFight\\CakeFight\\Source\\CakeFight\\CakeFightCharacter.cpp",
 		"arguments": [
 			"E:\\VScode\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
-			"@E:\\Game Dev\\Cake Fight\\CakeFight\\.vscode\\compileCommands_Default\\CakeFight.1.rsp"
+			"@E:\\Game Dev\\Cake Fight\\CakeFight\\CakeFight\\.vscode\\compileCommands_Default\\CakeFight.1.rsp"
 		],
 		"directory": "E:\\Game Dev\\UE5\\UE5\\UE_5.4\\Engine\\Source"
 	},
 	{
-		"file": "E:\\Game Dev\\Cake Fight\\CakeFight\\Source\\CakeFight\\CakeFightGameMode.h",
+		"file": "E:\\Game Dev\\Cake Fight\\CakeFight\\CakeFight\\Source\\CakeFight\\CakeFightCharacter.h",
 		"arguments": [
 			"E:\\VScode\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
-			"@E:\\Game Dev\\Cake Fight\\CakeFight\\.vscode\\compileCommands_Default\\CakeFight.1.rsp"
+			"@E:\\Game Dev\\Cake Fight\\CakeFight\\CakeFight\\.vscode\\compileCommands_Default\\CakeFight.1.rsp"
 		],
 		"directory": "E:\\Game Dev\\UE5\\UE5\\UE_5.4\\Engine\\Source"
 	},
 	{
-		"file": "E:\\Game Dev\\Cake Fight\\CakeFight\\Source\\CakeFight\\CakeFightPlayerController.cpp",
+		"file": "E:\\Game Dev\\Cake Fight\\CakeFight\\CakeFight\\Source\\CakeFight\\CakeFightGameMode.cpp",
 		"arguments": [
 			"E:\\VScode\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
-			"@E:\\Game Dev\\Cake Fight\\CakeFight\\.vscode\\compileCommands_Default\\CakeFight.1.rsp"
+			"@E:\\Game Dev\\Cake Fight\\CakeFight\\CakeFight\\.vscode\\compileCommands_Default\\CakeFight.1.rsp"
 		],
 		"directory": "E:\\Game Dev\\UE5\\UE5\\UE_5.4\\Engine\\Source"
 	},
 	{
-		"file": "E:\\Game Dev\\Cake Fight\\CakeFight\\Source\\CakeFight\\CakeFightPlayerController.h",
+		"file": "E:\\Game Dev\\Cake Fight\\CakeFight\\CakeFight\\Source\\CakeFight\\CakeFightGameMode.h",
 		"arguments": [
 			"E:\\VScode\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
-			"@E:\\Game Dev\\Cake Fight\\CakeFight\\.vscode\\compileCommands_Default\\CakeFight.1.rsp"
+			"@E:\\Game Dev\\Cake Fight\\CakeFight\\CakeFight\\.vscode\\compileCommands_Default\\CakeFight.1.rsp"
+		],
+		"directory": "E:\\Game Dev\\UE5\\UE5\\UE_5.4\\Engine\\Source"
+	},
+	{
+		"file": "E:\\Game Dev\\Cake Fight\\CakeFight\\CakeFight\\Source\\CakeFight\\CakeFightPlayerController.cpp",
+		"arguments": [
+			"E:\\VScode\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\Game Dev\\Cake Fight\\CakeFight\\CakeFight\\.vscode\\compileCommands_Default\\CakeFight.1.rsp"
+		],
+		"directory": "E:\\Game Dev\\UE5\\UE5\\UE_5.4\\Engine\\Source"
+	},
+	{
+		"file": "E:\\Game Dev\\Cake Fight\\CakeFight\\CakeFight\\Source\\CakeFight\\CakeFightPlayerController.h",
+		"arguments": [
+			"E:\\VScode\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\Game Dev\\Cake Fight\\CakeFight\\CakeFight\\.vscode\\compileCommands_Default\\CakeFight.1.rsp"
 		],
 		"directory": "E:\\Game Dev\\UE5\\UE5\\UE_5.4\\Engine\\Source"
 	}
