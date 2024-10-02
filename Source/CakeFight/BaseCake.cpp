@@ -3,6 +3,7 @@
 
 #include "BaseCake.h"
 #include "Components/CapsuleComponent.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 ABaseCake::ABaseCake()
@@ -28,6 +29,17 @@ ABaseCake::ABaseCake()
 void ABaseCake::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+}
+
+void ABaseCake::RotateTop(FVector LookAtTarget)
+{
+	FVector ToTarget = LookAtTarget - TopMesh->GetComponentLocation();
+
+	FRotator LookAtRotation = FRotator(0.f, ToTarget.Rotation().Yaw, 0.f);
+	TopMesh->SetWorldRotation(FMath::RInterpTo(TopMesh->GetComponentRotation(),
+							  LookAtRotation,
+							  UGameplayStatics::GetWorldDeltaSeconds(this),
+							  25.f));
 }
 
 // Called to bind functionality to input

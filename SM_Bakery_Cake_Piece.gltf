@@ -1,0 +1,184 @@
+{
+	"asset":
+	{
+		"version": "2.0",
+		"generator": "Unreal Engine 5.4.1"
+	},
+	"scene": 0,
+	"accessors": [
+		{
+			"bufferView": 0,
+			"count": 240,
+			"type": "SCALAR",
+			"componentType": 5121
+		},
+		{
+			"bufferView": 1,
+			"count": 85,
+			"type": "VEC3",
+			"componentType": 5126,
+			"min": [ -0.0877226889, -3.54806964e-18, -0.057944376 ],
+			"max": [ 0.0605289973, 0.0799999982, 0.0549557097 ]
+		},
+		{
+			"bufferView": 2,
+			"count": 85,
+			"type": "VEC3",
+			"componentType": 5126
+		},
+		{
+			"bufferView": 3,
+			"count": 85,
+			"type": "VEC4",
+			"componentType": 5126
+		},
+		{
+			"bufferView": 4,
+			"count": 85,
+			"type": "VEC2",
+			"componentType": 5126
+		},
+		{
+			"bufferView": 5,
+			"count": 85,
+			"type": "VEC2",
+			"componentType": 5126
+		}
+	],
+	"buffers": [
+		{
+			"uri": "SM_Bakery_Cake_Piece.bin",
+			"byteLength": 5000
+		}
+	],
+	"bufferViews": [
+		{
+			"buffer": 0,
+			"byteLength": 240,
+			"target": 34963
+		},
+		{
+			"buffer": 0,
+			"byteLength": 1020,
+			"byteOffset": 240,
+			"target": 34962
+		},
+		{
+			"buffer": 0,
+			"byteLength": 1020,
+			"byteOffset": 1260,
+			"target": 34962
+		},
+		{
+			"buffer": 0,
+			"byteLength": 1360,
+			"byteOffset": 2280,
+			"target": 34962
+		},
+		{
+			"buffer": 0,
+			"byteLength": 680,
+			"byteOffset": 3640,
+			"target": 34962
+		},
+		{
+			"buffer": 0,
+			"byteLength": 680,
+			"byteOffset": 4320,
+			"target": 34962
+		}
+	],
+	"images": [
+		{
+			"uri": "MI_Cake_Piece_Inst_BaseColor.png"
+		},
+		{
+			"uri": "MI_Cake_Piece_Inst_MetallicRoughness.png"
+		},
+		{
+			"uri": "MI_Cake_Piece_Inst_Normal.png"
+		}
+	],
+	"materials": [
+		{
+			"name": "MI_Cake_Piece_Inst",
+			"pbrMetallicRoughness":
+			{
+				"baseColorTexture":
+				{
+					"index": 0
+				},
+				"metallicRoughnessTexture":
+				{
+					"index": 1
+				}
+			},
+			"normalTexture":
+			{
+				"index": 2
+			},
+			"extensions":
+			{
+				"KHR_materials_specular":
+				{
+					"specularFactor": 0.498039246
+				}
+			}
+		}
+	],
+	"meshes": [
+		{
+			"name": "SM_Bakery_Cake_Piece",
+			"primitives": [
+				{
+					"attributes":
+					{
+						"POSITION": 1,
+						"NORMAL": 2,
+						"TANGENT": 3,
+						"TEXCOORD_0": 4,
+						"TEXCOORD_1": 5
+					},
+					"indices": 0,
+					"material": 0
+				}
+			]
+		}
+	],
+	"nodes": [
+		{
+			"mesh": 0
+		}
+	],
+	"samplers": [
+		{
+			"minFilter": 9987,
+			"magFilter": 9729
+		}
+	],
+	"scenes": [
+		{
+			"nodes": [ 0 ]
+		}
+	],
+	"textures": [
+		{
+			"name": "MI_Cake_Piece_Inst_BaseColor",
+			"sampler": 0,
+			"source": 0
+		},
+		{
+			"name": "MI_Cake_Piece_Inst_MetallicRoughness",
+			"sampler": 0,
+			"source": 1
+		},
+		{
+			"name": "MI_Cake_Piece_Inst_Normal",
+			"sampler": 0,
+			"source": 2
+		}
+	],
+	"extensionsUsed": [
+		"KHR_materials_specular"
+	]
+}
