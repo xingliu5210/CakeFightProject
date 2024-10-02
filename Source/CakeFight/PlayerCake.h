@@ -13,5 +13,17 @@ UCLASS()
 class CAKEFIGHT_API APlayerCake : public ABaseCake
 {
 	GENERATED_BODY()
+
+public: 
+	// Set default values for this cake's properties
+	APlayerCake();
+
+private:
+
+	UPROPERTY(VisibleAnywhere, Category = "Components")
+	class USpringArmComponent* SpringArm;
+
+	UPROPERTY(VisibleAnywhere, Category = "Components")
+	class UCameraComponent* Camera;
 	
 };
