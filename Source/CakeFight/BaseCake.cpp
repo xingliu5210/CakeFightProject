@@ -24,13 +24,6 @@ ABaseCake::ABaseCake()
 
 }
 
-// Called when the game starts or when spawned
-void ABaseCake::BeginPlay()
-{
-	Super::BeginPlay();
-	
-}
-
 // Called every frame
 void ABaseCake::Tick(float DeltaTime)
 {

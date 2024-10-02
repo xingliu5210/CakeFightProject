@@ -17,6 +17,39 @@ APlayerCake::APlayerCake()
 
 }
 
+// Called when the game starts or when spawned
+void APlayerCake::BeginPlay()
+{
+	Super::BeginPlay();
+    
+    PlayerControllerRef = Cast<APlayerController>(GetController());
+}
+
+// Call every frame
+void APlayerCake::Tick(float DeltaTime)
+{
+    Super::Tick(DeltaTime);
+    if (PlayerControllerRef)
+    {
+        FHitResult HitResult;
+        PlayerControllerRef->GetHitResultUnderCursor(
+            ECollisionChannel::ECC_Visibility,
+            false,
+            HitResult
+        );
+
+        DrawDebugSphere(
+	    GetWorld(), 
+	    HitResult.ImpactPoint,
+	    25.f,
+	    12,
+	    FColor::Red,
+	    false,
+	    -1.f);
+    }
+    
+}
+
 void APlayerCake::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
     Super::SetupPlayerInputComponent(PlayerInputComponent); 
