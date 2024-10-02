@@ -15,3 +15,15 @@ APlayerCake::APlayerCake()
     Camera->SetupAttachment(SpringArm);
 
 }
+
+void APlayerCake::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+{
+    Super::SetupPlayerInputComponent(PlayerInputComponent); 
+
+    PlayerInputComponent->BindAxis(TEXT("MoveForward"), this, &APlayerCake::Move);
+}
+
+void APlayerCake::Move(float Value)
+{
+    UE_LOG(LogTemp, Display, TEXT("Value: %f"), Value);
+}

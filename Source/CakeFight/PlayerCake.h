@@ -18,6 +18,9 @@ public:
 	// Set default values for this cake's properties
 	APlayerCake();
 
+	// Called to bind functionality to input
+	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
 private:
 
 	UPROPERTY(VisibleAnywhere, Category = "Components")
@@ -25,5 +28,7 @@ private:
 
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	class UCameraComponent* Camera;
+
+	void Move(float value);
 	
 };

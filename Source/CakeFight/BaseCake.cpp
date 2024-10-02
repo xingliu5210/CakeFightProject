@@ -36,6 +36,11 @@ void ABaseCake::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	FVector DeltaLocation(0.f);
+	DeltaLocation.X = 2.f;
+
+	AddActorLocalOffset(DeltaLocation);
+
 }
 
 // Called to bind functionality to input
