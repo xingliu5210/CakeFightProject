@@ -25,5 +25,7 @@ void APlayerCake::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 
 void APlayerCake::Move(float Value)
 {
-    UE_LOG(LogTemp, Display, TEXT("Value: %f"), Value);
+    FVector DeltaLocation = FVector::ZeroVector;
+    DeltaLocation.X = Value;
+    AddActorLocalOffset(DeltaLocation);
 }
