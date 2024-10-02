@@ -4,6 +4,7 @@
 #include "PlayerCake.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
+#include "Kismet/GameplayStatics.h"
 
 // Set default values
 APlayerCake::APlayerCake()
@@ -26,6 +27,7 @@ void APlayerCake::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 void APlayerCake::Move(float Value)
 {
     FVector DeltaLocation = FVector::ZeroVector;
-    DeltaLocation.X = Value;
+    // X = Value * DeltaTime * Speed
+    DeltaLocation.X = Value * UGameplayStatics::GetWorldDeltaSeconds(this) * speed;
     AddActorLocalOffset(DeltaLocation);
 }
