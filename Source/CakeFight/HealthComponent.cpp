@@ -40,6 +40,13 @@ void UHealthComponent::DamageTaken(AActor* DamagedActor,
 					 AController* Instigator,
 					 AActor* DamageCauser)
 {
-	UE_LOG(LogTemp, Display, TEXT("Your message"));
+	if (Damage <= 0.f)
+	{
+		return;
+	}
+
+	Health -= Damage;
+	UE_LOG(LogTemp, Warning, TEXT("Health: %f"), Health);
+	
 };
 
