@@ -9,19 +9,12 @@ void AEnemyCakeOne::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
 
-    // Find the distance to the playercake
-    if(PlayerCake)
+    // Find the distance to the playercake    
+    if (InFireRange())
     {
-        float Distance = FVector::Dist(GetActorLocation(), PlayerCake->GetActorLocation());
-
-        // Check to see if the playercake is in range
-        if (Distance <= FireRange)
-        {
-            // If in range, rotate top part toward the playercake
-            RotateTop(PlayerCake->GetActorLocation());
-        }
-        
+        RotateTop(PlayerCake->GetActorLocation());
     }
+    
 }
 
 void AEnemyCakeOne::BeginPlay()
@@ -30,5 +23,29 @@ void AEnemyCakeOne::BeginPlay()
 
     PlayerCake = Cast<APlayerCake>(UGameplayStatics::GetPlayerPawn(this, 0));
 
+    GetWorldTimerManager().SetTimer(FireRateTimerHandle, this, &AEnemyCakeOne::CheckFireCondition, FireRate, true);
+}
+
+void AEnemyCakeOne::CheckFireCondition()
+{
+    if (InFireRange())
+    {
+        Fire();
+    }
+    
+}
+
+bool AEnemyCakeOne::InFireRange()
+{
+    if(PlayerCake)
+    {
+        float Distance = FVector::Dist(GetActorLocation(), PlayerCake->GetActorLocation());
+        if (Distance <= FireRange)
+        {
+            return true;
+        }
+    }
+
+    return false;
 }
 
