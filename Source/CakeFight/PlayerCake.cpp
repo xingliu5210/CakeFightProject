@@ -49,6 +49,8 @@ void APlayerCake::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 
     PlayerInputComponent->BindAxis(TEXT("MoveForward"), this, &APlayerCake::Move);
     PlayerInputComponent->BindAxis(TEXT("Turn"), this, &APlayerCake::Turn);
+
+    PlayerInputComponent->BindAction(TEXT("Fire"), IE_Pressed, this, &APlayerCake::Fire);
 }
 
 void APlayerCake::Move(float Value)

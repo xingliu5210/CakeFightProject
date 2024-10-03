@@ -25,6 +25,7 @@ public:
 protected:
 
 	void RotateTop(FVector LookAtTarget);
+	void Fire();
 
 private: 
 

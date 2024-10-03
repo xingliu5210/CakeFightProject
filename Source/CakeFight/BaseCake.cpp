@@ -49,3 +49,17 @@ void ABaseCake::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 }
 
+void ABaseCake::Fire()
+{
+	FVector ProjectileSpawnPointLocation = ProjectileSpawnPoint->GetComponentLocation();
+	DrawDebugSphere(
+		GetWorld(),
+		ProjectileSpawnPoint->GetComponentLocation(),
+		25.f,
+		12,
+		FColor::Red,
+		false,
+		3.f
+	);
+}
+
