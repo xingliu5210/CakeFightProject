@@ -22,6 +22,8 @@ class CAKEFIGHT_API AEnemyCakeOne : public ABaseCake
 		// Called when the game starts or when spawned
 		virtual void BeginPlay() override;
 
+		void HandleDestruction();
+
 	private:
 	
 		class APlayerCake* PlayerCake;

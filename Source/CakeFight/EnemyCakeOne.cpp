@@ -49,3 +49,9 @@ bool AEnemyCakeOne::InFireRange()
     return false;
 }
 
+void AEnemyCakeOne::HandleDestruction()
+{
+    Super::HandleDestruction();
+    Destroy();
+}
+

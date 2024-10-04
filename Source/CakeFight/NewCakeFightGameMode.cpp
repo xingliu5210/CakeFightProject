@@ -33,6 +33,7 @@ void ANewCakeFightGameMode::BeginPlay()
 {
     Super::BeginPlay();
 
+    HandleGameStart();
 }
 
 void ANewCakeFightGameMode::HandleGameStart()
