@@ -26,5 +26,8 @@ class CAKEFIGHT_API ANewCakeFightGameMode : public AGameModeBase
 
 		class APlayerCake* PlayerCake;
 		class ACakeFightPlayerController* CakeFightPlayerController;
+
+		float StartDelay = 3.f;
+		void HandleGameStart();
 	
 };

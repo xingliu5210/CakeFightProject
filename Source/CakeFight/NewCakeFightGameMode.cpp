@@ -33,6 +33,23 @@ void ANewCakeFightGameMode::BeginPlay()
 {
     Super::BeginPlay();
 
+}
+
+void ANewCakeFightGameMode::HandleGameStart()
+{
     PlayerCake = Cast<APlayerCake>(UGameplayStatics::GetPlayerPawn(this, 0));
     CakeFightPlayerController = Cast<ACakeFightPlayerController>(UGameplayStatics::GetPlayerController(this, 0));
+
+    if(CakeFightPlayerController)
+    {
+        CakeFightPlayerController->SetPlayerEnabledState(false);
+
+        FTimerHandle PlayerEnableTimeHandle; 
+        FTimerDelegate PlayerEnableTimeDelegate = FTimerDelegate::CreateUObject(CakeFightPlayerController, &ACakeFightPlayerController::SetPlayerEnabledState, true);
+
+        GetWorldTimerManager().SetTimer(PlayerEnableTimeHandle,
+                                        PlayerEnableTimeDelegate,
+                                        StartDelay,
+                                        false);
+    }
 }
