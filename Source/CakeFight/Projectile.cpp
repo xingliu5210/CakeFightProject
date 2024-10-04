@@ -4,6 +4,7 @@
 #include "Projectile.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Kismet/GameplayStatics.h"
+#include "Particles/ParticleSystemComponent.h"
 
 
 // Sets default values
@@ -19,6 +20,9 @@ AProjectile::AProjectile()
 	ProjectileMovementComponent->InitialSpeed = 500.f;
 	ProjectileMovementComponent->MaxSpeed = 1300.f;
 
+	TrailParticles = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("Projectile Trail"));
+	TrailParticles->SetupAttachment(RootComponent);
+
 }
 
 // Called when the game starts or when spawned
@@ -27,6 +31,11 @@ void AProjectile::BeginPlay()
 	Super::BeginPlay();
 	
 	ProjectileMesh->OnComponentHit.AddDynamic(this, &AProjectile::OnHit);
+
+	if (LaunchSound)
+	{
+		UGameplayStatics::PlaySoundAtLocation(this, HitSound, GetActorLocation());
+	}
 
 }
 
@@ -55,7 +64,15 @@ void AProjectile::OnHit(UPrimitiveComponent* HitComponent,
 	if (OtherActor && OtherActor != this && OtherActor != MyOwner)
 	{
 		UGameplayStatics::ApplyDamage(OtherActor, Damage, MyOwnerInstigator, MyOwner, DamageTypeClass); // Damage Event
-		Destroy();
+		if(HitParticles)
+		{
+			UGameplayStatics::SpawnEmitterAtLocation(this, HitParticles, GetActorLocation(), GetActorRotation());
+		}
+		if(HitSound)
+		{
+			UGameplayStatics::PlaySoundAtLocation(this, HitSound, GetActorLocation());
+		}
 	}
+	Destroy();
 }
 

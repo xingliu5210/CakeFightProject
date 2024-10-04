@@ -61,5 +61,9 @@ void ABaseCake::Fire()
 
 void ABaseCake::HandleDestruction()
 {
-	// TODO: Visual/sound effects
+	if(DeathParticles && DeathSound)
+	{
+		UGameplayStatics::SpawnEmitterAtLocation(this, DeathParticles, GetActorLocation(), GetActorRotation());
+		UGameplayStatics::PlaySoundAtLocation(this, DeathSound, GetActorLocation());
+	}
 }
