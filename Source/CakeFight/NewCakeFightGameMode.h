@@ -24,6 +24,9 @@ class CAKEFIGHT_API ANewCakeFightGameMode : public AGameModeBase
 
 		UFUNCTION(BlueprintImplementableEvent)
 		void StartGame();
+
+		UFUNCTION(BlueprintImplementableEvent)
+		void GameOver(bool bWonGame);
 	
 	private:
 
@@ -32,5 +35,8 @@ class CAKEFIGHT_API ANewCakeFightGameMode : public AGameModeBase
 
 		float StartDelay = 4.f;
 		void HandleGameStart();
+
+		int32 TargetCakes = 0;
+		int32 GetTargetCakeCount();
 	
 };
