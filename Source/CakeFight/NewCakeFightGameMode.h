@@ -21,6 +21,9 @@ class CAKEFIGHT_API ANewCakeFightGameMode : public AGameModeBase
 	protected:
 		
 		virtual void BeginPlay() override;
+
+		UFUNCTION(BlueprintImplementableEvent)
+		void StartGame();
 	
 	private:
 

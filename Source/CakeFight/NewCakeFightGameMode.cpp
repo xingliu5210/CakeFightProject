@@ -12,20 +12,16 @@ void ANewCakeFightGameMode::ActorDied(AActor* DeadActor)
     if (DeadActor == PlayerCake)
     {
         PlayerCake->HandleDestruction();
-        /*
-        if (PlayerCake->PlayerCakeController)
+        if (CakeFightPlayerController)
         {
-            PlayerCake->DisableInput(PlayerCake->PlayerCakeController);
-            PlayerCake->PlayerCakeController->bShowMouseCursor = false;
+            CakeFightPlayerController->SetPlayerEnabledState(false);
         }
-        else if(AEnymeCakeOne* DestroyedCake == Cast<AEnemyCakeOne>(DeadActor))
-        {
-            DestroyedCake->HandleDestruction();
-        }
-        */
-
-        
     }
+    else if(AEnemyCakeOne* DestroyedCake = Cast<AEnemyCakeOne>(DeadActor))
+    {
+            DestroyedCake->HandleDestruction();
+    }
+             
     
 }
 
@@ -41,6 +37,8 @@ void ANewCakeFightGameMode::HandleGameStart()
     PlayerCake = Cast<APlayerCake>(UGameplayStatics::GetPlayerPawn(this, 0));
     CakeFightPlayerController = Cast<ACakeFightPlayerController>(UGameplayStatics::GetPlayerController(this, 0));
 
+    StartGame();
+
     if(CakeFightPlayerController)
     {
         CakeFightPlayerController->SetPlayerEnabledState(false);
@@ -54,3 +52,4 @@ void ANewCakeFightGameMode::HandleGameStart()
                                         false);
     }
 }
+

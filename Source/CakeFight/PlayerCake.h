@@ -26,6 +26,10 @@ public:
 
 	void HandleDestruction();
 
+	APlayerController* GetPlayerCakeController() const {return PlayerCakeController;}
+
+	bool bAlive = true;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
