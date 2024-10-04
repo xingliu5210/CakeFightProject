@@ -15,6 +15,8 @@ public:
 	// Sets default values for this pawn's properties
 	ABaseCake();
 
+	void HandleDestruction();
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

@@ -22,17 +22,17 @@ void APlayerCake::BeginPlay()
 {
 	Super::BeginPlay();
     
-    PlayerControllerRef = Cast<APlayerController>(GetController());
+    PlayerCakeController = Cast<APlayerController>(GetController());
 }
 
 // Call every frame
 void APlayerCake::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
-    if (PlayerControllerRef)
+    if (PlayerCakeController)
     {
         FHitResult HitResult;
-        PlayerControllerRef->GetHitResultUnderCursor(
+        PlayerCakeController->GetHitResultUnderCursor(
             ECollisionChannel::ECC_Visibility,
             false,
             HitResult
@@ -67,4 +67,12 @@ void APlayerCake::Turn(float Value)
     // Yaw = Value * DeltaTime * TurnRate
     DeltaRotation.Yaw = Value * UGameplayStatics::GetWorldDeltaSeconds(this) * TurnRate;
     AddActorLocalRotation(DeltaRotation, true);
+}
+
+void APlayerCake::HandleDestruction()
+{
+    Super::HandleDestruction();
+    SetActorHiddenInGame(true);
+    SetActorTickEnabled(false);
+    Destroy();
 }

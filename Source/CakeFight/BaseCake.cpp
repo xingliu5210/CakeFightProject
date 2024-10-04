@@ -58,3 +58,8 @@ void ABaseCake::Fire()
     AProjectile* Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, Location, Rotation);
 	Projectile->SetOwner(this);
 }
+
+void ABaseCake::HandleDestruction()
+{
+	// TODO: Visual/sound effects
+}

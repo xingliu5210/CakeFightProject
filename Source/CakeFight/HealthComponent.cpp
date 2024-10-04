@@ -2,6 +2,8 @@
 
 
 #include "HealthComponent.h"
+#include "Kismet/GameplayStatics.h"
+#include "NewCakeFightGameMode.h"
 
 // Sets default values for this component's properties
 UHealthComponent::UHealthComponent()
@@ -22,6 +24,8 @@ void UHealthComponent::BeginPlay()
 	Health = MaxHealth;
 
 	GetOwner()->OnTakeAnyDamage.AddDynamic(this, &UHealthComponent::DamageTaken);
+
+	CakeFightGameMode = Cast<ANewCakeFightGameMode>(UGameplayStatics::GetGameMode(this));
 	
 }
 
@@ -46,7 +50,12 @@ void UHealthComponent::DamageTaken(AActor* DamagedActor,
 	}
 
 	Health -= Damage;
-	UE_LOG(LogTemp, Warning, TEXT("Health: %f"), Health);
+	UE_LOG(LogTemp, Display, TEXT("Your Health: %f"), Health);
+	if(Health <= 0.f && CakeFightGameMode)
+	{
+		CakeFightGameMode->ActorDied(DamagedActor);
+		UE_LOG(LogTemp, Display, TEXT("Done"));
+	}
 	
 };
 
