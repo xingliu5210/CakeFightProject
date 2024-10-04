@@ -25,5 +25,6 @@ class CAKEFIGHT_API ANewCakeFightGameMode : public AGameModeBase
 	private:
 
 		class APlayerCake* PlayerCake;
+		class ACakeFightPlayerController* CakeFightPlayerController;
 	
 };

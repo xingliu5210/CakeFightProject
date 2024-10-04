@@ -5,6 +5,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "PlayerCake.h"
 #include "EnemyCakeOne.h"
+#include "CakeFightPlayerController.h"
 
 void ANewCakeFightGameMode::ActorDied(AActor* DeadActor)
 {
@@ -33,4 +34,5 @@ void ANewCakeFightGameMode::BeginPlay()
     Super::BeginPlay();
 
     PlayerCake = Cast<APlayerCake>(UGameplayStatics::GetPlayerPawn(this, 0));
+    CakeFightPlayerController = Cast<ACakeFightPlayerController>(UGameplayStatics::GetPlayerController(this, 0));
 }
