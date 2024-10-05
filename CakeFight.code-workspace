@@ -11,16 +11,7 @@
 	],
 	"settings": {
 		"typescript.tsc.autoDetect": "off",
-		"npm.autoDetect": "off",
-		"files.associations": {
-			"__tree": "cpp",
-			"new": "cpp",
-			"optional": "cpp",
-			"typeinfo": "cpp",
-			"exception": "cpp",
-			"memory": "cpp",
-			"xtree": "cpp"
-		}
+		"npm.autoDetect": "off"
 	},
 	"extensions": {
 		"recommendations": [

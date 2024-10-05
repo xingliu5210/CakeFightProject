@@ -88,6 +88,22 @@
 		"directory": "E:\\Game Dev\\UE5\\UE5\\UE_5.4\\Engine\\Source"
 	},
 	{
+		"file": "E:\\Game Dev\\Cake Fight\\CakeFight\\CakeFight\\Source\\CakeFight\\EnemyCakeTwo.cpp",
+		"arguments": [
+			"E:\\VScode\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\Game Dev\\Cake Fight\\CakeFight\\CakeFight\\.vscode\\compileCommands_Default\\CakeFight.1.rsp"
+		],
+		"directory": "E:\\Game Dev\\UE5\\UE5\\UE_5.4\\Engine\\Source"
+	},
+	{
+		"file": "E:\\Game Dev\\Cake Fight\\CakeFight\\CakeFight\\Source\\CakeFight\\EnemyCakeTwo.h",
+		"arguments": [
+			"E:\\VScode\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\Game Dev\\Cake Fight\\CakeFight\\CakeFight\\.vscode\\compileCommands_Default\\CakeFight.1.rsp"
+		],
+		"directory": "E:\\Game Dev\\UE5\\UE5\\UE_5.4\\Engine\\Source"
+	},
+	{
 		"file": "E:\\Game Dev\\Cake Fight\\CakeFight\\CakeFight\\Source\\CakeFight\\HealthComponent.cpp",
 		"arguments": [
 			"E:\\VScode\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe",
