@@ -5,6 +5,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "PlayerCake.h"
 #include "EnemyCakeOne.h"
+#include "EnemyCakeTwo.h"
 #include "CakeFightPlayerController.h"
 
 void ANewCakeFightGameMode::ActorDied(AActor* DeadActor)
@@ -18,15 +19,26 @@ void ANewCakeFightGameMode::ActorDied(AActor* DeadActor)
         }
         GameOver(false);
     }
-    else if(AEnemyCakeOne* DestroyedCake = Cast<AEnemyCakeOne>(DeadActor))
+    else if (AEnemyCakeOne* EnemyCakeOne = Cast<AEnemyCakeOne>(DeadActor))
     {
-            DestroyedCake->HandleDestruction();
-            TargetCakes--;
-            if(TargetCakes == 0)
-            {
-                GameOver(true);
-            }
-    }                
+        // Handle destruction specific to AEnemyCakeOne
+        EnemyCakeOne->HandleDestruction();
+        TargetCakes--;
+        if (TargetCakes == 0)
+        {
+            GameOver(true);
+        }
+    }
+    else if (AEnemyCakeTwo* EnemyCakeTwo = Cast<AEnemyCakeTwo>(DeadActor))
+    {
+        // Handle destruction specific to AEnemyCakeTwo
+        EnemyCakeTwo->HandleDestruction();
+        TargetCakes--;
+        if (TargetCakes == 0)
+        {
+            GameOver(true);
+        }
+    }                  
 }
 
 void ANewCakeFightGameMode::BeginPlay()
@@ -60,7 +72,11 @@ void ANewCakeFightGameMode::HandleGameStart()
 
 int32 ANewCakeFightGameMode::GetTargetCakeCount()
 {
-    TArray<AActor*> Cakes;
-    UGameplayStatics::GetAllActorsOfClass(this, AEnemyCakeOne::StaticClass(), Cakes);
-    return Cakes.Num();
+    TArray<AActor*> CakesOne;
+    TArray<AActor*> CakesTwo;
+    int32 TotalNum = 0;
+    UGameplayStatics::GetAllActorsOfClass(this, AEnemyCakeOne::StaticClass(), CakesOne);
+    UGameplayStatics::GetAllActorsOfClass(this, AEnemyCakeTwo::StaticClass(), CakesTwo);
+    TotalNum = CakesOne.Num() + CakesTwo.Num();
+    return TotalNum;
 }
