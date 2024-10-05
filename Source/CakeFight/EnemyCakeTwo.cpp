@@ -28,7 +28,7 @@ void AEnemyCakeTwo::BeginPlay()
 
 void AEnemyCakeTwo::CheckFireCondition()
 {
-    if (InFireRange())
+    if (InFireRange() && PlayerCake->bAlive)
     {
         Fire();
     }
